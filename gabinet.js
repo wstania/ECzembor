@@ -5,12 +5,12 @@ $(document).ready(function(){
     $('.feature.bordered.mb30 .uppercase').mouseover(function(){
         $(this).addClass("hvr-float-shadow");
     });
-   $('a[href^="#"]').on('click', function() {
+   $('a[href^="#"]').on('click', function(e) {
 
         var target = $( $(this).attr('href') );
 
         if( target.length ) {
-            event.preventDefault();
+            e.preventDefault();
             $('html, body').animate({
                 scrollTop: target.offset().top
             }, 1000);
